@@ -1,0 +1,16 @@
+{
+  "name": "project5-nodejs-expressjs-mongodb",
+  "version": "1.0.0",
+  "description": "Belajar contact app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Kamasi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-ejs-layouts": "^2.5.1"
+  }
+}
