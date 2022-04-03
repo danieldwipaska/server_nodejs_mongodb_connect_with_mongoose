@@ -1,3 +1,7 @@
+let exampleInputName1 = req.query.exampleInputName1;
+let exampleInputNumber1 = req.query.exampleInputNumber1;
+
+// MongoDB API
 const { ObjectID } = require('bson');
 const { MongoClient, Db } = require('mongodb');
 
@@ -17,28 +21,29 @@ client.connect((error, client) => {
   const db = client.db(dbName);
 
   // menambah 1 data ke data collection My Contact
-  //   db.collection('contacts').insertOne(
-  //     {
-  //       nama: 'Daniel',
-  //       noTelp: '08888340024',
-  //     },
-  //     (error, result) => {
-  //       if (error) {
-  //         return console.log('gagal menambahkan data!');
-  //       }
+  db.collection('contacts').insertOne(
+    {
+      nama: exampleInputName1,
+      noTelp: exampleInputNumber1,
+    },
+    (error, result) => {
+      if (error) {
+        return console.log('gagal menambahkan data!');
+      }
 
-  //       console.log(result);
-  //     }
-  //   );
-
-  db.collection('contacts')
-    .deleteOne({
-      _id: ObjectID('62470e04dabcf364547a1517'),
-    })
-    .then((result) => {
       console.log(result);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+    }
+  );
+  // menghapus 1 data
+  // db.collection('contacts')
+  //   .deleteOne({
+  //     _id: ObjectID('62470e04dabcf364547a1517'),
+  //   })
+  //   .then((result) => {
+  //     console.log(result);
+  //   })
+  //   .catch((error) => {
+  //     console.log(error);
+  //   });
 });
+// mongodb ends

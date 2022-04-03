@@ -9,9 +9,11 @@
   "author": "Daniel Kamasi",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.0",
     "ejs": "^3.1.6",
     "express": "^4.17.3",
     "express-ejs-layouts": "^2.5.1",
-    "mongodb": "4.4"
+    "mongodb": "4.4",
+    "mongoose": "^6.2.9"
   }
 }
