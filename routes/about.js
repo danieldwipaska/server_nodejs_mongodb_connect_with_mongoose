@@ -26,7 +26,7 @@ router.post('/', (req, res) => {
   post // promise
     .save() // mongoose syntax
     .then((data) => {
-      res.json(data);
+      res.json(data); // send a response from mongodb to client
     })
     .catch((err) => {
       res.json({ message: err });
